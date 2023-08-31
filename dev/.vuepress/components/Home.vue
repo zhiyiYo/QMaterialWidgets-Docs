@@ -4,4 +4,3 @@
         <Footer />
     </div>
 </template>
-
