@@ -48,8 +48,6 @@ const socialLinks = computed(() =>
 );
 
 document.title = 'QMaterialWidgets - ' + home.value.subtitle;
-
-
 </script>
 
 <style scoped>

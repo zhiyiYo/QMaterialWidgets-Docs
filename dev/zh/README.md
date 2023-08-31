@@ -1,7 +1,8 @@
 ---
 home: true
 modules:
-  - Home
   - MdContent
 
+isShowTitleInHome: true
 ---
+<Home />
