@@ -47,12 +47,12 @@ def setCustomStyleSheet(widget: QWidget, lightQss: str, darkQss: str) -> None
 
 where `widget` is the component that needs its style adjusted, `lightQss` and `darkQss` are the custom styles added for light/dark themes.
 
-For example, let's adjust the border-radius of a `PushButton` to 10px:
+For example, let's change the foreground color of a `OutlinedPushButton` to red:
 ```python
-button = PushButton('Button', self)
+button = OutlinedPushButton('Button', self)
 
 # add custom qss
-qss = 'PushButton{border-radius: 10px}'
+qss = 'OutlinedPushButton{color: red}'
 setCustomStyleSheet(button, qss, qss)
 ```
 In Qt Designer, you can achieve custom styling by adding dynamic properties. Here are the steps:

@@ -24,22 +24,22 @@ def icon(self, theme=Theme.AUTO, color: QColor = None) -> QIcon:
 
 ```python
 # 使用浅色主题图标
-button = PrimaryToolButton(FluentIcon.ADD.icon(Theme.LIGHT))
+button = FilledToolButton(FluentIcon.ADD.icon(Theme.LIGHT))
 
 # 使用深色主题图标
-button = PrimaryToolButton(FluentIcon.ADD.icon(Theme.DARK))
+button = FilledToolButton(FluentIcon.ADD.icon(Theme.DARK))
 
 # 使用颜色名称
-button = PrimaryToolButton(FluentIcon.ADD.icon(color='red'))
+button = FilledToolButton(FluentIcon.ADD.icon(color='red'))
 
 # 使用十六进制字符串
-button = PrimaryToolButton(FluentIcon.ADD.icon(color='#ff0000'))
+button = FilledToolButton(FluentIcon.ADD.icon(color='#ff0000'))
 
 # 使用 Qt.GlobalColor
-button = PrimaryToolButton(FluentIcon.ADD.icon(color=Qt.red))
+button = FilledToolButton(FluentIcon.ADD.icon(color=Qt.red))
 
 # 使用 QColor
-button = PrimaryToolButton(FluentIcon.ADD.icon(color=QColor(255, 0, 0)))
+button = FilledToolButton(FluentIcon.ADD.icon(color=QColor(255, 0, 0)))
 ```
 
 
@@ -67,11 +67,14 @@ class MyMaterialIcon(MaterialIconbase, Enum):
 
 之后就可以将 `MyMaterialIcon` 的枚举成员直接作为参数传给需要图标的组件，比如：
 ```python
-from qmaterialwidgets import PrimaryToolButton
+from qmaterialwidgets import FilledToolButton, toggleTheme
 
 # 创建工具按钮
-button = PrimaryToolButton(MyMaterialIcon.ADD)
+button = FilledToolButton(MyMaterialIcon.ADD)
 
 # 更换图标
 button.setIcon(MyMaterialIcon.CUT)
+
+# 切换主题时图标也会跟着改变
+button.clicked.connect(toggleTheme)
 ```

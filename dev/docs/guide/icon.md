@@ -25,22 +25,22 @@ It will return `QIcon` instance according to the `theme` and `color`, the `color
 
 ```python
 # use light theme icon
-button = PrimaryToolButton(FluentIcon.ADD.icon(Theme.LIGHT))
+button = FilledToolButton(FluentIcon.ADD.icon(Theme.LIGHT))
 
 # use dark theme icon
-button = PrimaryToolButton(FluentIcon.ADD.icon(Theme.DARK))
+button = FilledToolButton(FluentIcon.ADD.icon(Theme.DARK))
 
 # use color name
-button = PrimaryToolButton(FluentIcon.ADD.icon(color='red'))
+button = FilledToolButton(FluentIcon.ADD.icon(color='red'))
 
 # use hex color string
-button = PrimaryToolButton(FluentIcon.ADD.icon(color='#ff0000'))
+button = FilledToolButton(FluentIcon.ADD.icon(color='#ff0000'))
 
 # use Qt.GlobalColor
-button = PrimaryToolButton(FluentIcon.ADD.icon(color=Qt.red))
+button = FilledToolButton(FluentIcon.ADD.icon(color=Qt.red))
 
 # use QColor
-button = PrimaryToolButton(FluentIcon.ADD.icon(color=QColor(255, 0, 0)))
+button = FilledToolButton(FluentIcon.ADD.icon(color=QColor(255, 0, 0)))
 ```
 
 ### Add icon
@@ -66,11 +66,13 @@ class MyMaterialIcon(MaterialIconBase, Enum):
 
 Then you can pass the member of `MyMaterialIcon` to the component which needs icon：
 ```python
-from qmaterialwidgets import PrimaryToolButton
+from qmaterialwidgets import FilledToolButton, toggleTheme
 
 # create tool button
-button = PrimaryToolButton(MyMaterialIcon.ADD)
+button = FilledToolButton(MyMaterialIcon.ADD)
 
 # change icon
 button.setIcon(MyMaterialIcon.CUT)
+
+button.clicked.connect(toggleTheme)
 ```

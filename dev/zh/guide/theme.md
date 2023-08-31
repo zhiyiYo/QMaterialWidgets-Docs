@@ -47,12 +47,12 @@ def setCustomStyleSheet(widget: QWidget, lightQss: str, darkQss: str) -> None
 ```
 其中 `widget` 是需要调整样式的组件，`lightQss` 和 `darkQss` 是浅/深色主题下 **添加** 的自定义样式。
 
-举个例子，将 `PushButton` 的圆角调成 10px：
+举个例子，将 `OutlinedPushButton` 的文本改为红色：
 ```python
-button = PushButton('Button', self)
+button = OutlinedPushButton('Button', self)
 
 # 添加自定义样式表
-qss = 'PushButton{border-radius: 10px}'
+qss = 'OutlinedPushButton{color: red}'
 setCustomStyleSheet(button, qss, qss)
 ```
 

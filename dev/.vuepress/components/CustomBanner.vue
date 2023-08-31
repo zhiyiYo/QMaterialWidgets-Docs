@@ -1,25 +1,26 @@
 <template>
-    <section class="banner-brand__wrapper" :style="{ ...bgImageStyle }">
+    <section class="banner-brand__wrapper">
         <div class="banner-brand__content">
-            <h1 class="title" v-if="frontmatter?.customBanner?.title">{{ frontmatter?.customBanner?.title }}</h1>
+            <h1 class="title">{{ home.title }}</h1>
 
-            <p class="description" v-if="frontmatter?.customBanner?.description">
-                {{ frontmatter?.customBanner?.description }}</p>
+            <p class="description">{{ home.subtitle }}</p>
 
-            <p class="tagline" v-if="frontmatter?.customBanner?.tagline">{{ frontmatter?.customBanner?.tagline }}</p>
+            <p class="tagline">{{ home.description }}</p>
 
-
-            <div class="btn-group" v-if="buttons.length > 0">
-                <Xicons v-for="(btn, index) in buttons" :class="btn.type" :key="index" :icon="btn.icon" :text="btn.text"
+            <!-- 按钮 -->
+            <div class="btn-group">
+                <Xicons v-for="(btn, index) in home.buttons" :class="btn.type" :key="index" :icon="btn.icon" :text="btn.text"
                     :link="btn.link" icon-size="18" text-size="14" />
             </div>
 
-            <ul class="social-links" v-if="socialLinks.length > 0">
+            <!-- 社交图标 -->
+            <ul class="social-links">
                 <li class="social-item" v-for="(item, index) in socialLinks" :key="index">
                     <Xicons :icon="item.icon" :link="item.link" :style="{ color: item.color }" target="_blank" />
                 </li>
             </ul>
 
+            <!-- 徽章 -->
             <div class="shields-wrapper">
                 <img alt="GitHub license"
                     src="https://img.shields.io/github/license/zhiyiYo/QMaterialWidgets?logo=github&color=616ae5">
@@ -34,45 +35,29 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { usePageFrontmatter, withBase } from '@vuepress/client'
-import Link from 'vuepress-theme-reco/lib/client/components/Link.vue'
+import { localeConfig } from "../utils/locale";
 import { createOneColor } from 'vuepress-theme-reco/lib/client/utils'
 
-const frontmatter = usePageFrontmatter()
-
-const heroImage = computed(() => {
-    return frontmatter.value?.customBanner?.heroImage
-        ? withBase(frontmatter.value?.customBanner?.heroImage)
-        : null
-})
-
-const buttons = computed(() => {
-    return frontmatter.value?.customBanner?.buttons || []
-})
+let home = localeConfig('home');
 
 const socialLinks = computed(() =>
-    (frontmatter.value?.customBanner?.socialLinks || []).map(item => {
+    home.value.socialLinks.map(item => {
         if (!item.color) item.color = createOneColor()
         return item
-    }))
+    })
+);
 
-const heroImageStyle = computed(
-    () => frontmatter.value.customBanner.heroImageStyle || {}
-)
+document.title = 'QMaterialWidgets - ' + home.value.subtitle;
 
-const bgImageStyle = computed(() => {
-    const { bgImageStyle, bgImage } = frontmatter.value?.customBanner || {}
 
-    const initBgImageStyle = bgImage ? {
-        overflow: 'hidden',
-        background: `url(${withBase(bgImage)}) center/cover no-repeat`
-    } : {}
-
-    return bgImageStyle ? { ...initBgImageStyle, ...bgImageStyle } : initBgImageStyle
-})
 </script>
 
 <style scoped>
+.banner-brand__wrapper {
+    overflow: hidden;
+    background: url(/img/bg.svg) center/cover no-repeat;
+
+}
 .shields-wrapper {
     @apply mt-20 text-left;
 

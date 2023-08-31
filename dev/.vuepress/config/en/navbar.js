@@ -47,7 +47,7 @@ export const navbar = [
       },
       {
         text: 'API docs',
-        link: 'https://pyqt-fluent-widgets.readthedocs.io/zh_CN/latest/autoapi/index.html'
+        link: 'https://qmaterialwidgets.readthedocs.io/zh_CN/latest/autoapi/index.html'
       },
     ],
   },

@@ -27,7 +27,7 @@ Well, the widget is now promoted to fluent push button. But you won’t be able 
 
 ### Using plugin
 
-1. create a virtual environment, `conda` is the recommended way.
+1. create a virtual environment, `conda` is the recommended tool, python should be 3.8.
 
 2. Activate virtual environment and run the following code in shell:
 
