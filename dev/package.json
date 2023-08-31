@@ -1,0 +1,23 @@
+{
+  "name": "qmaterialwidgets-docs",
+  "version": "1.0.0",
+  "description": "The documentation for QMaterialWidgets components library.",
+  "repository": "git@github.com:zhiyiYo/QMaterialWidgets-Docs.git",
+  "author": "zhiyiYo <shokokawaii@outlook.com>",
+  "license": "GPLv3",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "start": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "dependencies": {
+    "highlight.js": "^11.8.0",
+    "inter-ui": "^3.19.3",
+    "vuepress-theme-reco": "2.0.0-beta.67"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.66",
+    "vuepress-plugin-seo2": "^2.0.0-beta.235",
+    "vuepress-plugin-sitemap2": "^2.0.0-beta.235"
+  }
+}
