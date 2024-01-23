@@ -47,6 +47,20 @@ export const navbar = [
       },
     ],
   },
+  {
+    text: '演示',
+    icon: 'Download',
+    children: [
+      {
+        text: '视频',
+        link: 'https://www.bilibili.com/video/BV1k14y1z74o'
+      },
+      {
+        text: '体验包',
+        link: 'https://github.com/zhiyiYo/PyQt-Fluent-Widgets/releases/download/v1.4.1/QMaterialWidgets-Gallery.zip'
+      },
+    ]
+  },
   { text: '案例', link: '/zh/showcase/', icon: 'Code' },
   { text: '价格', link: '/zh/price', icon: 'ShoppingCart' },
   { text: '视频教程', link: 'https://www.bilibili.com/video/BV12c411L73q', icon: 'Playlist' },
