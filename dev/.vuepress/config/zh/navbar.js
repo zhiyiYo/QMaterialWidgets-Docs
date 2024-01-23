@@ -11,10 +11,6 @@ export const navbar = [
             link: '/zh/pages/about'
           },
           {
-            text: '安装',
-            link: '/zh/pages/install'
-          },
-          {
             text: '设计师',
             link: '/zh/pages/designer'
           },
@@ -52,7 +48,6 @@ export const navbar = [
     ],
   },
   { text: '案例', link: '/zh/showcase/', icon: 'Code' },
-  { text: '支持', icon: 'Cafe', link: '/zh/pages/support/' },
   { text: '价格', link: '/zh/price', icon: 'ShoppingCart' },
   { text: '视频教程', link: 'https://www.bilibili.com/video/BV12c411L73q', icon: 'Playlist' },
 ];

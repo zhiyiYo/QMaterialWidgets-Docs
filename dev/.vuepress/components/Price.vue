@@ -9,14 +9,6 @@
             </div>
         </div>
 
-        <!-- 分段导航栏 -->
-        <div class="segmented-nav">
-            <div class="segmented-container">
-                <div @click="onPySide6Clicked" :class="pyside6NavItemClass">PySide6</div>
-                <div @click="onPySide2Clicked" :class="pyside2NavItemClass">PySide2</div>
-            </div>
-        </div>
-
         <!-- 价格卡 -->
         <div class="price-card-container">
             <div class="price-card-list">
@@ -28,19 +20,9 @@
                     :url="p.url"
                     :recommend="p.recommend"
                     :features="p.features"
-                    v-show="isPySide6"
+                    :contactSales="p.contactSales"
+                    :permanent="p.permanent"
                     v-for="p in pricePlan.pyside6"
-                 />
-                <PriceCard
-                    :title="p.title"
-                    :desc="p.desc"
-                    :price="p.price"
-                    :year="p.year"
-                    :url="p.url"
-                    :recommend="p.recommend"
-                    :features="p.features"
-                    v-show="!isPySide6"
-                    v-for="p in pricePlan.pyside2"
                  />
             </div>
         </div>
@@ -117,7 +99,7 @@ let onPySide2Clicked = () => {
 }
 
 .price-card-container {
-    @apply mx-auto max-w-7xl mt-10 px-6 lg:px-8;
+    @apply mx-auto max-w-7xl mt-20 px-6 lg:px-8;
 
     .price-card-list {
         @apply isolate m-auto mt-10 grid grid-cols-1 gap-8 lg:m-0 lg:grid-cols-3 tracking-normal;

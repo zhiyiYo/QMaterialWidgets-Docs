@@ -30,17 +30,12 @@ permalink: /zh/pages/designer/
 2. 激活虚拟环境，在终端中输入下述命令安装所需的包：
 
    ```shell
-   pip install PyQt-Material-Widgets
    pip install pyqt5-tools
    ```
 
-3. 从 [QMaterialWidgets 仓库](https://github.com/zhiyiYo/QMaterialWidgets) 下载代码
-
-4. 运行 `python ./tools/designer.py` 来启动设计师软件（必须使用脚本启动）
+3. 运行 `python ./tools/designer.py` 来启动设计师软件（必须使用脚本启动）
 
 一切无误的情况下能在侧边栏 Widget Box 中看到 QMaterialWidgets 的组件。如果启动失败或者看不到 QMaterialWidgets 的组件，解决方案参见 [Issue#196](https://github.com/zhiyiYo/PyQt-Fluent-Widgets/issues/196)。
-
-如果嫌搭建环境麻烦的话，可以从 [项目发行页面](https://github.com/zhiyiYo/QMaterialWidgets/releases) 下载内置了 QMaterialWidgets 插件的 MaterialDesigner，下载并解压 `MaterialDesigner_v*.*.*.zip`，双击运行 `designer/designer.exe` 就能启动 QtDesigner。
 
 <div style="position: relative; padding: 30% 45%;">
     <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?cid=1124976209&aid=953381256&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>

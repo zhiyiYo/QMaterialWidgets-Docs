@@ -12,23 +12,6 @@
                 <Xicons v-for="(btn, index) in home.buttons" :class="btn.type" :key="index" :icon="btn.icon" :text="btn.text"
                     :link="btn.link" icon-size="18" text-size="14" />
             </div>
-
-            <!-- 社交图标 -->
-            <ul class="social-links">
-                <li class="social-item" v-for="(item, index) in socialLinks" :key="index">
-                    <Xicons :icon="item.icon" :link="item.link" :style="{ color: item.color }" target="_blank" />
-                </li>
-            </ul>
-
-            <!-- 徽章 -->
-            <div class="shields-wrapper">
-                <img alt="GitHub license"
-                    src="https://img.shields.io/github/license/zhiyiYo/QMaterialWidgets?logo=github&color=616ae5">
-                <img alt="GitHub stars"
-                    src="https://img.shields.io/github/stars/zhiyiYo/QMaterialWidgets?logo=github&color=616ae5">
-                <img src="https://img.shields.io/pypi/v/pyqt-material-widgets?color=616ae5&label=Version&logo=pypi" alt="Version">
-                <img src="https://img.shields.io/badge/Platform-Win32%20|%20Linux%20|%20macOS-blue?color=616ae5&logo=windows10" alt="Platform Win32 | Linux | macOS"/>
-            </div>
         </div>
     </section>
 </template>

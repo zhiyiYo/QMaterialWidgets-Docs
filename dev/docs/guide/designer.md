@@ -32,17 +32,12 @@ Well, the widget is now promoted to fluent push button. But you won’t be able 
 2. Activate virtual environment and run the following code in shell:
 
    ```shell
-   pip install PyQt-Material-Widgets
    pip install pyqt5-tools
    ```
 
-3. Download the full code from [QMaterialWidgets Repo](https://github.com/zhiyiYo/QMaterialWidgets).
-
-4. Run `python ./tools/designer.py` to launch Qt Designer (You must use this way to launch Qt Designer).
+3. Run `python ./tools/designer.py` to launch Qt Designer (You must use this way to launch Qt Designer).
 
 If everything goes smoothly, you will see all QMaterialWidgets components in the sidebar of Qt Designer. If the startup fails or the components of QMaterialWidgets cannot be seen, the solution can be found in [Issue#196](https://github.com/zhiyiYo/PyQt-Fluent-Widgets/issues/196).
-
-You can also download the compiled QtDesigner from [release page](https://github.com/zhiyiYo/QMaterialWidgets/releases). Download and unzip `MaterialDesigner_v*.*.*.zip`, then run `designer/designer.exe`, you will launch the QtDesigner that has already installed plugins.
 
 <div style="position: relative; padding: 30% 45%;">
     <iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="https://player.bilibili.com/player.html?cid=1124976209&aid=953381256&page=1&as_wide=1&high_quality=1&danmaku=0" frameborder="no" scrolling="no" allowfullscreen="true"></iframe>

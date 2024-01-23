@@ -11,10 +11,6 @@ export const navbar = [
             link: '/pages/about'
           },
           {
-            text: 'Install',
-            link: '/pages/install'
-          },
-          {
             text: 'Designer',
             link: '/pages/designer'
           },
@@ -52,7 +48,6 @@ export const navbar = [
     ],
   },
   { text: 'Showcase', link: '/showcase/', icon: 'Code' },
-  { text: 'Support', link: '/pages/support/', icon: 'Cafe' },
   { text: 'Price', link: '/price', icon: 'ShoppingCart' },
   { text: 'Tutorials', link: 'https://www.bilibili.com/video/BV12c411L73q', icon: 'Playlist' },
 ];
