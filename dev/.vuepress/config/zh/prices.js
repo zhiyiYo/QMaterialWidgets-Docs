@@ -36,8 +36,8 @@ export const prices = {
         },
         {
             title: '个人年付版',
-            desc: '每个月不到 18 元，一杯奶茶的价格。',
-            price: '￥208',
+            desc: '每个月低至 16.5 元，一杯奶茶的价格。',
+            price: '￥198',
             year: true,
             url: 'https://item.taobao.com/item.htm?ft=t&id=762754931617',
             recommend: true,
